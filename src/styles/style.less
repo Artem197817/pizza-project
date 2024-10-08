@@ -273,6 +273,8 @@ h2 {
       font-size: 20px;
       text-align: center;
       color: var(--515647);
+      position: relative;
+      z-index: 10;
     }
   }
   .order-block{
@@ -285,6 +287,8 @@ h2 {
       flex-direction: column;
       margin-bottom: 241px;
       margin-right: 48px;
+      position: relative;
+      z-index: 10;
 
       .order-input{
         border: 2px solid var(--848d6f);
@@ -318,8 +322,10 @@ h2 {
 }
 .footer-container {
 
-  box-shadow: 0px -5px 0 var(--848d6f);
+  box-shadow: 0px -27px 30px -34px var(--848d6f);
   padding-bottom: 48px;
   padding-top: 48px;
   .flex-center-between;
 }
+
+@import 'adaptive.less';

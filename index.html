@@ -14,32 +14,54 @@
                 <img src="images/logo.png" alt="logo" class="logo-img">
             </a>
         </div>
+        <a href="#" class="menu-burger" id="menu-burger">
+            ☰
+        </a>
+        <nav class="menu-pop-up wow animate__fadeInUp">
+
+           <div class="close-menu">&#215;</div>
+
+            <h2 class="menu-title-title">Меню</h2>
+            <ul>
+                <li class="menu-item">
+                    <a href="#title" class="menu-item-link">Главная</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#advantages" class="menu-item-link">Почему мы</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#products" class="menu-item-link">Пицца</a>
+                </li>
+                    
+            </ul>
+        </nav>
+
         <nav class="menu">
             <ul class="menu-items">
                 <li class="menu-item">
-                    <a href="#" class="menu-item-link">Главная</a>
+                    <a href="#title" class="menu-item-link">Главная</a>
                 </li>
                 <li class="menu-item two">
-                    <a href="#" class="menu-item-link">Почему мы</a>
+                    <a href="#advantages" class="menu-item-link">Почему мы</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-item-link">Пицца</a>
+                    <a href="#products" class="menu-item-link">Пицца</a>
                 </li>
             </ul>
         </nav>
         <div class="header-none">G</div>
     </div>
 </header>
-<section class="title">
+<section class="title" id="title">
     <div class="main-container title-container">
         <h1 class="title-title">Пицца из печи</h1>
         <div class="title-text">Наша пиццерия гордится своей исключительной репутацией и предлагает уникальное меню.
             В нём только фирменные блюда, приготовленные в печи по традиционным технологиям, со вкусом настоящей Италии!
         </div>
-        <a href="#" class="button title-button">Заказать</a>
+        <a href="#products" class="button title-button">Заказать</a>
     </div>
 </section>
-<section class="advantages">
+<section class="advantages" id="advantages">
     <div class="main-container advantages-container">
         <h2 class="advantages-title">Почему наша пицца
             такая вкусная?</h2>
@@ -76,13 +98,22 @@
         </div>
     </div>
 </section>
-<section class="products">
+<section class="products" id="products">
     <div class="main-container products-container">
         <h2 class="products-title">Выбор пиццы</h2>
         <div class="products-select-size">
-            <button class="button products-size-select-button">24 см</button>
-            <button class="button products-size-select-button">30 см</button>
-            <button class="button products-size-select-button">36 см</button>
+            <div>
+                <input type="radio" id="option1" name="options" value="24" checked>
+                <label for="option1" class="button products-size-select-button">24 см</label>
+            </div>
+            <div>
+                <input type="radio" id="option2" name="options" value="30">
+                <label for="option2" class="button products-size-select-button">30 см</label>
+            </div>
+            <div>
+                <input type="radio" id="option3" name="options" value="36">
+                <label for="option3" class="button products-size-select-button">36 см</label>
+            </div>
         </div>
         <div class="products-block">
             <div class="product">
@@ -98,7 +129,7 @@
                 </div>
                 <div class="product-order-block">
                     <div class="product-price">420 ₽</div>
-                    <a href="#" class="button product-button">Заказать</a>
+                    <a href="#order" class="button product-button">Заказать</a>
                 </div>
             </div>
             <div class="product">
@@ -114,7 +145,7 @@
                 </div>
                 <div class="product-order-block">
                     <div class="product-price">390 ₽</div>
-                    <a href="#" class="button product-button">Заказать</a>
+                    <a href="#order" class="button product-button">Заказать</a>
                 </div>
             </div>
             <div class="product">
@@ -129,7 +160,7 @@
                 </div>
                 <div class="product-order-block">
                     <div class="product-price">360 ₽</div>
-                    <a href="#" class="button product-button">Заказать</a>
+                    <a href="#order" class="button product-button">Заказать</a>
                 </div>
             </div>
             <div class="product">
@@ -143,7 +174,7 @@
                 </div>
                 <div class="product-order-block">
                     <div class="product-price">360 ₽</div>
-                    <a href="#" class="button product-button">Заказать</a>
+                    <a href="#order" class="button product-button">Заказать</a>
                 </div>
             </div>
             <div class="product">
@@ -158,7 +189,7 @@
                 </div>
                 <div class="product-order-block">
                     <div class="product-price">420 ₽</div>
-                    <a href="#" class="button product-button">Заказать</a>
+                    <a href="#order" class="button product-button">Заказать</a>
                 </div>
             </div>
             <div class="product">
@@ -176,13 +207,13 @@
                 </div>
                 <div class="product-order-block">
                     <div class="product-price">510 ₽</div>
-                    <a href="#" class="button product-button">Заказать</a>
+                    <a href="#order" class="button product-button">Заказать</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="order">
+<section class="order" id="order">
     <div class="main-container order-container">
         <div class="order-title-block">
         <h2 class="order-title">Заказать пиццу</h2>
@@ -202,11 +233,7 @@
         </div>
     </div>
 </section>
-<!--<div class="main-container border">-->
-<!--    <svg width="1920" height="158" viewBox="0 0 1920 158" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--        <path d="M0 0H1920V164H0V0Z" fill="#1F1F1F" />-->
-<!--    </svg>-->
-<!--</div>-->
+
 <footer class="footer">
     <div class="main-container footer-container">
         <div class="logo">
@@ -217,5 +244,7 @@
         <div class="rights">Все права защищены</div>
     </div>
 </footer>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="scripts/script.js"></script>
 </body>
 </html>

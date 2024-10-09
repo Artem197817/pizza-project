@@ -2,7 +2,10 @@
   --1f1f1f: #1f1f1f;
   --848d6f: #848d6f;
   --515647: #515647;
+  --1f1f1f08: rgba(31, 31, 31, 0.8);
 }
+
+@background-opacity:  rgba(31, 31, 31, 0.8);
 
 @font-face {
   font-family: Nunito;
@@ -75,7 +78,67 @@ h2 {
 .header-container {
   .flex-center-between;
   padding-top: 24px;
+  position: relative;
 
+  .menu-burger{
+    display: none;
+    margin-right: 24px;
+    font-size: 60px;
+    color: var(--848d6f);
+    text-decoration: none;
+  }
+  .menu-pop-up{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    width: 290px;
+    padding: 48px;
+    top: 0;
+    right: 0;
+    background: var(--1f1f1f08);
+
+    .menu-title-title{
+      margin-top: 48px;
+      text-align: left;
+    }
+    .close-menu{
+      width: 25px;
+      height: 25px;
+      color: var(--848d6f);
+      cursor: pointer;
+      font-size: 32px;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-top: 48px;
+      margin-bottom: 48px;
+
+      .menu-item {
+        margin-bottom: 24px;
+
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        .menu-item-link {
+          font-family: var(--font-family);
+          font-weight: 700;
+          font-size: 16px;
+          text-transform: uppercase;
+          color: var(--848d6f);
+          text-decoration: none;
+        }
+      }
+    }
+
+
+  }
   .menu {
     ul {
       list-style: none;
@@ -160,12 +223,14 @@ h2 {
 
   .advantages-block {
     .flex-center-between;
+    
 
     .advantage {
       max-width: 368px;
 
       .advantage-title-block {
         .flex-center-between;
+
         margin-bottom: 12px;
 
         .advantage-title {
@@ -195,7 +260,17 @@ h2 {
 
   .products-select-size{
     .flex-center-between;
+    flex-wrap: wrap;
     width: 567px;
+
+    input[type='radio'] {
+      display: none;
+    }
+
+    input[type='radio']:checked + label {
+      background: var(--848d6f);
+      color: var(--1f1f1f);
+    }
 
     .products-size-select-button{
       color: var(--848d6f);
@@ -275,6 +350,7 @@ h2 {
       color: var(--515647);
       position: relative;
       z-index: 10;
+
     }
   }
   .order-block{
@@ -300,6 +376,8 @@ h2 {
         box-sizing: border-box;
         outline: none;
         margin-bottom: 18px;
+        color: var(--848d6f);
+        font-size: 18px;
 
         &::placeholder {
           font-family: var(--font-family);
